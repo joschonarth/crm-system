@@ -1,9 +1,17 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Site from './site/site.jsx'
+import Login from './app/login.jsx';
 
 function App() {
-    return <div>
-        <p>Hello Word</p>
-    </div>
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route exact path='/' element={<Site />} />
+                <Route exact path='/app' element={<Login />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
-
 export default App;
