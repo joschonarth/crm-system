@@ -6,6 +6,7 @@ import Login from './app/login/login.jsx';
 import Cadastro from './app/cadastro/cadastro.jsx';
 import ResetSenha from './app/resetSenha/resetSenha.jsx';
 import Home from './app/home/home.jsx';
+import NovoCliente from './app/novocliente/novocliente.jsx';
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route exact path='/app/cadastro' element={<Cadastro />} />
                 <Route exact path='/app/reset-senha' element={<ResetSenha />} />
                 <Route exact path='/app/home' element={<Home />} />
+                <Route exact path='/app/novo-cliente' element={<NovoCliente />} />
             </Routes>
         </BrowserRouter>
     );
