@@ -15,19 +15,19 @@ function Menu(){
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                    <a href="#" className="nav-link" aria-current="page">Home</a>
+                    <a href="#banner" className="nav-link" aria-current="page">Home</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link" aria-current="page">Features</a>
+                    <a href="#features" className="nav-link" aria-current="page">Features</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link" aria-current="page">Clientes</a>
+                    <a href="#testimonials" className="nav-link" aria-current="page">Clientes</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link" aria-current="page">Planos e Preços</a>
+                    <a href="#planos" className="nav-link" aria-current="page">Planos e Preços</a>
                 </li>
                 <li className="nav-item">
-                    <a href="#" className="nav-link" aria-current="page">Contato</a>
+                    <a href="#footer" className="nav-link" aria-current="page">Contato</a>
                 </li>
             </ul>            
         </div>
