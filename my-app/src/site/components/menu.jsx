@@ -1,25 +1,36 @@
 import React from 'react';
 
 function Menu(){
-    return <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container-fluid">
-            {/* <a class="navbar-brand" href="#">99 CRM</a> */}
-            <a className="navbar-brand" href="#">
-                <img src="Images/logo.png" alt="" height="28"/>
-            </a>
+    return <nav className="navbar navbar-expand-md navbar-dark">
 
-            <button className='navbar-toggler' type='button' data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                <span className='navbar-toggler-icon'></span>
-            </button>
+    <div className="container">
+        <a href="#" className="navbar-brand">99 CRM</a>
 
-            <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-                <ul className='navbar-nav ms-auto'>
-                    
-                </ul>
-            </div>
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+        </button>
 
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto">
+                <li className="nav-item">
+                    <a href="#" className="nav-link" aria-current="page">Home</a>
+                </li>
+                <li className="nav-item">
+                    <a href="#" className="nav-link" aria-current="page">Features</a>
+                </li>
+                <li className="nav-item">
+                    <a href="#" className="nav-link" aria-current="page">Clientes</a>
+                </li>
+                <li className="nav-item">
+                    <a href="#" className="nav-link" aria-current="page">Planos e Preços</a>
+                </li>
+                <li className="nav-item">
+                    <a href="#" className="nav-link" aria-current="page">Contato</a>
+                </li>
+            </ul>            
         </div>
-    </nav>;
+    </div>
+</nav>;
 }
 
 export default Menu;

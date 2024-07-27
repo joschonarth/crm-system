@@ -1,8 +1,9 @@
 import React from 'react';
+import Menu from './components/menu'
 
 function Site(){
     return <div>
-        <h1>Site...</h1>
+        <Menu/>
     </div>;
 }
 
