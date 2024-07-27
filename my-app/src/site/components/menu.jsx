@@ -6,7 +6,7 @@ function Menu(){
     <div className="container">
         {/* <a href="#" className="navbar-brand">99 CRM</a> */}
         <a href="#" className="navbar-brand">
-                <img src="images/logo.png" alt="" height="28"/>
+                <img src="img/logo.png" alt="" height="28"/>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

@@ -7,17 +7,17 @@ function Testimonials(){
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="5000">
                         <h3>"Excelente ferramenta para acompanhamento do dia a dia, sendo flexível o suficiente para a maior parte dos usos. Seja para controle de CRM ou para controle de visitas, o 99 CRM tem se revelado uma ferramenta muito útil e intuitiva."</h3>
-                        <img src="images/cliente.jpg" alt="..."/>
+                        <img src="img/cliente.jpg" alt="..."/>
                         <em>João da Silva - São Paulo</em>
                     </div>
                     <div className="carousel-item active" data-bs-interval="5000">
                         <h3>"Excelente ferramenta para acompanhamento do dia a dia, sendo flexível o suficiente para a maior parte dos usos. Seja para controle de CRM ou para controle de visitas, o 99 CRM tem se revelado uma ferramenta muito útil e intuitiva."</h3>
-                        <img src="images/cliente.jpg" alt="..."/>
+                        <img src="img/cliente.jpg" alt="..."/>
                         <em>João Otávio - Rio de Janeiro</em>
                     </div>
                     <div className="carousel-item active" data-bs-interval="5000">
                         <h3>"Excelente ferramenta para acompanhamento do dia a dia, sendo flexível o suficiente para a maior parte dos usos. Seja para controle de CRM ou para controle de visitas, o 99 CRM tem se revelado uma ferramenta muito útil e intuitiva."</h3>
-                        <img src="images/cliente.jpg" alt="..."/>
+                        <img src="img/cliente.jpg" alt="..."/>
                         <em>João Otávio - Minas Gerais</em>
                     </div>        
                 </div>

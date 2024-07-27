@@ -4,7 +4,7 @@ import './login.css';
 function Login(){
     return <div className='d-flex align-items-center text-center form-container'>
     <form className='form-signin'>
-        <img className="mb-4" src="images/logo-small2.png" alt=""/>
+        <img className="mb-4" src="img/logo-small2.png" alt=""/>
         <h1 className="h3 mb-3 fw-normal">Login</h1>
 
         <div className="form-floating">
