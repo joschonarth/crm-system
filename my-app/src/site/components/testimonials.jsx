@@ -2,7 +2,7 @@ import React from 'react';
 
 function Testimonials(){
     return <section id='testimonials'>
-        <div classNameName="container">
+        <div className="container">
             <div id="carouselExampleInterval" className="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active" data-bs-interval="5000">
