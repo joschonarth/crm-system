@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Menu(){
-    return <nav className="navbar navbar-expand-md navbar-dark">
+    return <nav className="navbar fixed-top navbar-expand-md navbar-dark">
 
     <div className="container">
         {/* <a href="#" className="navbar-brand">99 CRM</a> */}
