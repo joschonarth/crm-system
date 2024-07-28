@@ -2,16 +2,39 @@ import React, { useState } from 'react';
 import {Link} from 'react-router-dom';
 import './cadastro.css';
 import { auth } from '../config/firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
-function Cadastro(){
-
+function Cadastro() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [mensagem, setMensagem] = useState('');
 
-    function cadastrarUsuario(){
-        alert('OK');
+    function cadastrarUsuario() {
+        setMensagem('');
+
+        if (!email || !senha) {
+            setMensagem('Informe todos os campos');
+            return;
+        }
+
+        createUserWithEmailAndPassword(auth, email, senha)
+            .then((userCredential) => {
+                // Limpar campos após o sucesso (opcional)
+                // setEmail('');
+                // setSenha('');
+                alert('Usuário criado com sucesso');
+            })
+            .catch((error) => {
+                if (error.message === 'Firebase: Error (auth/email-already-in-use).') {
+                    setMensagem('Email já cadastrado.');
+                } else if (error.message === 'Firebase: Password should be at least 6 characters (auth/weak-password).') {
+                    setMensagem('A senha deve ter pelo menos 6 caracteres');
+                } else if (error.message === 'Firebase: Error (auth/invalid-email).') {
+                    setMensagem('Digite um Email válido');
+                } else {
+                    setMensagem(error.message);
+                }
+            });
     }
 
     return <div className='d-flex align-items-center text-center form-container'>
