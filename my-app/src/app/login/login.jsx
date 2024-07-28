@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import './login.css';
 import { auth } from '../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
@@ -51,6 +51,7 @@ function Login() {
                 <button onClick={loginUsuario} className="btn btn-primary w-100 py-2" type="button">Acessar</button>
 
                 { sucesso === 'N' ? <div className="alert alert-danger mt-2" role="alert">Email ou Senha inválidos!</div> : null }
+                { sucesso === 'Y' ? <Navigate to='/app/home '/> : null }
 
                 <div className='login-links mt-5'>
                     <Link to="/app/reset-senha" className='mx-3'>Esqueci minha senha</Link>
