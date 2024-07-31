@@ -6,7 +6,7 @@ function Navbar(){
     return <nav className="navbar fixed-top navbar-expand-md navbar-dark">
 
     <div className="container-fluid">
-        {/* <a href="#" className="navbar-brand">99 CRM</a> */}
+        {/* <a href="/#" className="navbar-brand">99 CRM</a> */}
         <a href="#" className="navbar-brand">
                 <img src="/img/logo.png" alt="" height="28"/>
         </a>
