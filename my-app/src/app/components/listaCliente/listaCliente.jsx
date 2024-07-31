@@ -16,7 +16,7 @@ function ListaClientes(){
 
     {
         clientes.map((cliente) => {
-            return <tr>
+            return <tr key={cliente.id}>
             <th scope="row">{cliente.id}</th>
             <td>{cliente.name}</td>
             <td>{cliente.email}</td>
