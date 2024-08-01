@@ -26,8 +26,10 @@ function NovoCliente(){
                         <input type="text" className="form-control" id="telefone" aria-describedby="phoneHelp"/>
                     </div>
         
-                    <button type="submit" className="btn btn-outline-primary">Cancelar</button>
-                    <button type="submit" className="btn btn-primary">Salvar</button>
+                    <div className="text-center">
+                        <button type="submit" className="btn btn-outline-primary btn-action">Cancelar</button>
+                        <button type="submit" className="btn btn-primary btn-action">Salvar</button>
+                    </div>
                 </form>
             </div>
         </div>
