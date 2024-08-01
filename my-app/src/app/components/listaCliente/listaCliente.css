@@ -1,0 +1,16 @@
+.icon-action {
+    margin-left: 7px;
+    margin-right:  7px;
+}
+
+.edit-icon {
+    color: #2FAE90;
+}
+
+.delete-icon {
+    color: #E32C3E;
+}
+
+.col-action {
+    width: 80px;
+}

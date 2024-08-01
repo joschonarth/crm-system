@@ -1,30 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './listaCliente.css';
 
-import { firestore } from '../../config/firebase';
-import { collection, getDocs } from 'firebase/firestore';
+function ListaClientes(props) {
 
-function ListaClientes() {
-    const [clientes, setClientes] = useState([]);
-
-    useEffect(() => {
-        async function fetchClientes() {
-            try {
-                const querySnapshot = await getDocs(collection(firestore, 'clientes'));
-                const listaCliente = querySnapshot.docs.map(doc => ({
-                    id: doc.id,
-                    nome: doc.data().nome,
-                    email: doc.data().email,
-                    phone: doc.data().phone
-                }));
-                setClientes(listaCliente);
-            } catch (error) {
-                console.error("Erro ao buscar clientes: ", error);
-            }
-        }
-
-        fetchClientes();
-    }, []);
+    function deleteUser(id){
+        alert('Usuario excluido' + id);
+    }
 
     return (
         <table className="table table-hover table-bordered">
@@ -34,15 +16,20 @@ function ListaClientes() {
                     <th scope="col">Nome</th>
                     <th scope="col">Email</th>
                     <th scope="col">Telefone</th>
+                    <th scope="col" className="col-action"></th>
                 </tr>
             </thead>
             <tbody>
-                {clientes.map(cliente => (
+                {props.arrayClientes.map(cliente => (
                     <tr key={cliente.id}>
                         <th scope="row">{cliente.id}</th>
                         <td>{cliente.nome}</td>
                         <td>{cliente.email}</td>
                         <td>{cliente.phone}</td>
+                        <td>
+                            <Link to='#'><i class="fa-solid fa-pen-to-square icon-action"></i></Link>
+                            <Link to='#' onClick={() => deleteUser(cliente.id)}><i class="fa-solid fa-trash icon-action delete-icon"></i></Link>
+                        </td>
                     </tr>
                 ))}
             </tbody>
