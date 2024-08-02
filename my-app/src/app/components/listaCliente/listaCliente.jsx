@@ -27,8 +27,8 @@ function ListaClientes(props) {
                         <td>{cliente.email}</td>
                         <td>{cliente.phone}</td>
                         <td>
-                            <Link to='#'><i class="fa-solid fa-pen-to-square icon-action"></i></Link>
-                            <Link to='#' onClick={() => deleteUser(cliente.id)}><i class="fa-solid fa-trash icon-action delete-icon"></i></Link>
+                            <Link to='#'><i className="fa-solid fa-pen-to-square icon-action"></i></Link>
+                            <Link to='#' onClick={() => deleteUser(cliente.id)}><i className="fa-solid fa-trash icon-action delete-icon"></i></Link>
                         </td>
                     </tr>
                 ))}

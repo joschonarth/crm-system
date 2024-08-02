@@ -41,13 +41,13 @@ function Home(){
 
             <div className='row'>
                 <div className='col-4'>
-                    <Link to='/app/novo-cliente' className="btn btn-primary" type="button"><i class="fa-solid fa-plus"></i> Cliente</Link>
+                    <Link to='/app/novo-cliente' className="btn btn-primary" type="button"><i className="fa-solid fa-plus"></i> Cliente</Link>
                 </div>
                 
                 <div className='col-8'>
                     <div className="input-group mb-3">
                         <input onChange={(e) => setTexto(e.target.value)} type="text" className="form-control" placeholder="Pesquisa por nome" aria-describedby="button-addon2"/>
-                        <button onClick={(e) => setBusca(texto)} className="btn btn-primary" type="button" id="button-addon2"><i class="fa-solid fa-magnifying-glass"></i> Pesquisar</button>
+                        <button onClick={(e) => setBusca(texto)} className="btn btn-primary" type="button" id="button-addon2"><i className="fa-solid fa-magnifying-glass"></i> Pesquisar</button>
                     </div>
                 </div>
             </div>
