@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import Navbar from '../components/navbar/navbar'
-import './novoCliente.css';
+import './editarCliente.css';
 
 import { firestore } from '../config/firebase';
 import { collection, addDoc } from 'firebase/firestore';
 
-function NovoCliente(){
+function EditarCliente(){
 
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
@@ -15,6 +15,10 @@ function NovoCliente(){
     const [sucesso, setSucesso] = useState('N');
     
     const clientesCollection = collection(firestore, 'clientes');
+
+    useEffect(() => {
+        
+    }, [])
 
     async function CadastrarCliente() {
 
@@ -52,9 +56,14 @@ function NovoCliente(){
         <div className='container-fluid titulo'>
 
             <div className="offset-lg-3 col-lg-6">
-                <h1>Novo Cliente</h1>
+                <h1>Editar Cliente</h1>
 
                 <form>
+                    <div className="mb-3">
+                        <label htmlFor="exampleInputEmail1" className="form-label">Código</label>
+                        <input type="text" className="form-control" id="nome" aria-describedby="codigoHelp" disabled/>
+                    </div>
+
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Nome</label>
                         <input onChange={(e) => setNome(e.target.value)} type="text" className="form-control" id="nome" aria-describedby="nameHelp"/>
@@ -84,4 +93,4 @@ function NovoCliente(){
     </div>;
 }
 
-export default NovoCliente;
+export default EditarCliente;

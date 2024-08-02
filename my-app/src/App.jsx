@@ -6,7 +6,8 @@ import Login from './app/login/login.jsx';
 import Cadastro from './app/cadastro/cadastro.jsx';
 import ResetSenha from './app/resetSenha/resetSenha.jsx';
 import Home from './app/home/home.jsx';
-import NovoCliente from './app/novocliente/novocliente.jsx';
+import NovoCliente from './app/novoCliente/novoCliente.jsx';
+import EditarCliente from './app/editarCliente/editarCliente.jsx';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Route exact path='/app/reset-senha' element={<ResetSenha />} />
                 <Route exact path='/app/home' element={<Home />} />
                 <Route exact path='/app/novo-cliente' element={<NovoCliente />} />
+                <Route exact path='/app/editar-cliente/:id' element={<EditarCliente />} />
             </Routes>
         </BrowserRouter>
     );
