@@ -1,26 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import './login.css';
 import { auth } from '../config/firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
-
+import { AuthContext } from '../context/auth';
 
 function Login() {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [sucesso, setSucesso] = useState('');
+    const {setLogged} = useContext(AuthContext);
 
     function loginUsuario() {
         signInWithEmailAndPassword(auth, email, senha)
             .then((userCredential) => {
                 const user = userCredential.user;
                 // alert('Login realizado com sucesso!');
+                localStorage.setItem('logged', 'Y');
+                setLogged(true);
                 setSucesso('Y');
             })
             .catch((error) => {
                 // const errorCode = error.code;
                 // const errorMessage = error.message;
                 // alert(errorMessage);
+                localStorage.setItem('logged', 'N');
+                setLogged(false);
                 setSucesso('N');
             });
     }

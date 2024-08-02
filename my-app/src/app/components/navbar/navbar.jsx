@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {Link} from 'react-router-dom';
 import './navbar.css';
+import { AuthContext } from '../../context/auth';
 
 function Navbar(){
+
+    const {setLogged} = useContext(AuthContext);
+
+    function Logout(){
+        setLogged(false);
+        localStorage.removeItem('logged');
+    }
+
     return <nav className="navbar fixed-top navbar-expand-md navbar-dark">
 
     <div className="container-fluid">
@@ -23,7 +32,7 @@ function Navbar(){
                     <Link to="/app/novo-cliente" className="nav-link" aria-current="page">Novo Cliente</Link>
                 </li>
                 <li className="nav-item">
-                    <Link to="/app" className="nav-link" aria-current="page">Sair</Link>
+                    <a onClick={Logout} className="nav-link" aria-current="page">Sair</a>
                 </li>
             </ul>            
         </div>
