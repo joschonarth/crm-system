@@ -5,13 +5,25 @@ import ListaClientes from '../components/listaCliente/listaCliente';
 import './home.css';
 
 import { firestore } from '../config/firebase';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 
 function Home(){
 
     const [clientes, setClientes] = useState([]);
     const [busca, setBusca] = useState('');
     const [texto, setTexto] = useState('');
+    const [excluido, setExcluido] = useState('');
+
+     async function deleteUser(id) {
+        try {
+            const userDocRef = doc(firestore, 'clientes', id);
+            await deleteDoc(userDocRef);
+            setExcluido(id);
+            console.log(`Usuário com ID ${id} excluído com sucesso.`);
+        } catch (error) {
+            console.error(`Erro ao excluir o usuário com ID ${id}:`, error);
+        }
+    }
 
     useEffect(() => {
         async function fetchClientes() {
@@ -32,7 +44,7 @@ function Home(){
             }
         }
         fetchClientes();
-    }, [busca]);
+    }, [busca, excluido]);
 
     return <div>
         <Navbar/>
@@ -52,7 +64,7 @@ function Home(){
                 </div>
             </div>
 
-            <ListaClientes arrayClientes={clientes} />
+            <ListaClientes arrayClientes={clientes} clickDelete={deleteUser} />
         </div>
     </div>
 }
