@@ -29,7 +29,7 @@ function ResetSenha(){
 
         <div className="form-floating">
             <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="floatingInput" placeholder="Email"/>
-            <label for="floatingInput">Email</label>
+            <label htmlFor="floatingInput">Email</label>
         </div>
 
         <button onClick={recuperarSenha} className="btn btn-primary w-100 py-2 mt-3" type="button">Enviar</button>

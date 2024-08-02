@@ -43,11 +43,11 @@ function Cadastro() {
 
         <div className="form-floating">
             <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="floatingInput" placeholder="Email"/>
-            <label for="floatingInput">Email</label>
+            <label htmlFor="floatingInput">Email</label>
         </div>
         <div className="form-floating">
             <input onChange={(e) => setSenha(e.target.value)} type="password" className="form-control" id="floatingPassword" placeholder="Senha"/>
-            <label for="floatingPassword">Senha</label>
+            <label htmlFor="floatingPassword">Senha</label>
         </div>
 
         <button onClick={cadastrarUsuario} className="btn btn-primary w-100 py-2" type="button">Criar Conta</button>
