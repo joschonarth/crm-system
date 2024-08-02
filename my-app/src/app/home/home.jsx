@@ -3,11 +3,10 @@ import { Link } from 'react-router-dom';
 import Navbar from '../components/navbar/navbar';
 import ListaClientes from '../components/listaCliente/listaCliente';
 import './home.css';
-
 import { firestore } from '../config/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
-
 import SweetAlert from 'react-bootstrap-sweetalert';
+import clientesPDF from '../reports/clientes/clientes';
 
 function Home(){
 
@@ -63,7 +62,8 @@ function Home(){
 
             <div className='row'>
                 <div className='col-4'>
-                    <Link to='/app/novo-cliente' className="btn btn-primary" type="button"><i className="fa-solid fa-plus"></i> Cliente</Link>
+                    <Link to='/app/novo-cliente' className="btn btn-primary btn-home" type="button"><i className="fa-solid fa-plus"></i> Cliente</Link>
+                    <button onClick={(e) => clientesPDF(clientes)} className="btn btn-danger btn-home" type="button" id="button-addon2"><i className="fa-solid fa-file-pdf"></i> Gerar PDF</button>
                 </div>
                 
                 <div className='col-8'>
