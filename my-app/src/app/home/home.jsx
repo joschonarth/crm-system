@@ -7,22 +7,32 @@ import './home.css';
 import { firestore } from '../config/firebase';
 import { collection, getDocs, doc, deleteDoc } from 'firebase/firestore';
 
+import SweetAlert from 'react-bootstrap-sweetalert';
+
 function Home(){
 
     const [clientes, setClientes] = useState([]);
     const [busca, setBusca] = useState('');
     const [texto, setTexto] = useState('');
     const [excluido, setExcluido] = useState('');
+    const [confirmacao, setConfirmacao] = useState(false);
+    const [confirmacaoId, setConfirmacaoId] = useState('');
 
      async function deleteUser(id) {
         try {
             const userDocRef = doc(firestore, 'clientes', id);
             await deleteDoc(userDocRef);
             setExcluido(id);
+            setConfirmacao(false);
             console.log(`Usuário com ID ${id} excluído com sucesso.`);
         } catch (error) {
             console.error(`Erro ao excluir o usuário com ID ${id}:`, error);
         }
+    }
+
+    function confirmDeleteUser(id){
+        setConfirmacaoId(id);
+        setConfirmacao(true);
     }
 
     useEffect(() => {
@@ -64,7 +74,25 @@ function Home(){
                 </div>
             </div>
 
-            <ListaClientes arrayClientes={clientes} clickDelete={deleteUser} />
+            <ListaClientes arrayClientes={clientes} clickDelete={confirmDeleteUser} />
+
+            {
+            confirmacao ? <SweetAlert
+                            warning
+                            showCancel
+                            showCloseButton
+                            confirmBtnText="Sim"
+                            confirmBtnBsStyle={'danger'}
+                            cancelBtnText="Não"
+                            // cancelBtnStyle={'light'}
+                            title="Exclusão"
+                            onConfirm={() =>deleteUser(confirmacaoId)}
+                            onCancel={()=> setConfirmacao(false)}
+                            reverseButtons={true}
+                            >
+                            Deseja excluir o cliente selecionado?
+                        </SweetAlert> : null 
+            }
         </div>
     </div>
 }
