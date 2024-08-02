@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link, Navigate } from 'react-router-dom';
-import Navbar from '../components/navbar/navbar'
+import { useParams, Navigate, Link } from 'react-router-dom';
+import Navbar from '../components/navbar/navbar';
 import './editarCliente.css';
 
 import { firestore } from '../config/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, doc, getDoc, updateDoc } from 'firebase/firestore';
 
-function EditarCliente(){
-
+function EditarCliente() {
+    const { id } = useParams();
+    
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -15,41 +16,49 @@ function EditarCliente(){
     const [sucesso, setSucesso] = useState('N');
     
     const clientesCollection = collection(firestore, 'clientes');
+    const clienteDocRef = doc(clientesCollection, id);
 
     useEffect(() => {
-        
-    }, [])
+        const fetchCliente = async () => {
+            try {
+                const docSnap = await getDoc(clienteDocRef);
+                if (docSnap.exists()) {
+                    const data = docSnap.data();
+                    setNome(data.nome);
+                    setEmail(data.email);
+                    setPhone(data.phone);
+                } else {
+                    setMensagem('Cliente não encontrado');
+                }
+            } catch (error) {
+                setMensagem('Erro ao buscar cliente: ' + error.message);
+            }
+        };
+        fetchCliente();
+    }, [id]);
 
-    async function CadastrarCliente() {
-
+    const AtualizarCliente = async () => {
         if (!nome) {
             setMensagem('Informe o nome');
-        }
-        else if (!email) {
+        } else if (!email) {
             setMensagem('Informe o email');
-        }
-        else if (!phone) {
+        } else if (!phone) {
             setMensagem('Informe o telefone');
-        }
-        else {
-
+        } else {
             try {
-                await addDoc(clientesCollection, {
-                    nome: nome,
-                    email: email,
-                    phone: phone,
+                await updateDoc(clienteDocRef, {
+                    nome,
+                    email,
+                    phone,
                 });
-                setMensagem('Cliente cadastrado com sucesso!');
+                setMensagem('Cliente atualizado com sucesso!');
                 setSucesso('Y');
-            } catch (erro) {
-                setMensagem('Erro ao cadastrar cliente: ' + erro.message);
+            } catch (error) {
+                setMensagem('Erro ao atualizar cliente: ' + error.message);
                 setSucesso('N');
             }
-
         }
-
-        
-    }
+    };
 
     return <div>
         <Navbar/>
@@ -61,27 +70,27 @@ function EditarCliente(){
                 <form>
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Código</label>
-                        <input type="text" className="form-control" id="nome" aria-describedby="codigoHelp" disabled/>
+                        <input type="text" value={id} className="form-control" id="codigo" aria-describedby="codigoHelp" disabled/>
                     </div>
 
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Nome</label>
-                        <input onChange={(e) => setNome(e.target.value)} type="text" className="form-control" id="nome" aria-describedby="nameHelp"/>
+                        <input onChange={(e) => setNome(e.target.value)} value={nome} type="text" className="form-control" id="nome" aria-describedby="nameHelp"/>
                     </div>
 
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Email</label>
-                        <input onChange={(e) => setEmail(e.target.value)} type="email" className="form-control" id="email" aria-describedby="emailHelp"/>
+                        <input onChange={(e) => setEmail(e.target.value)} value={email} type="email" className="form-control" id="email" aria-describedby="emailHelp"/>
                     </div>
 
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label">Telefone</label>
-                        <input onChange={(e) => setPhone(e.target.value)} type="text" className="form-control" id="telefone" aria-describedby="phoneHelp"/>
+                        <input onChange={(e) => setPhone(e.target.value)} value={phone} type="text" className="form-control" id="telefone" aria-describedby="phoneHelp"/>
                     </div>
         
                     <div className="text-center">
                         <Link to='/app/home' className="btn btn-outline-primary btn-action">Cancelar</Link>
-                        <button onClick={CadastrarCliente} type="button" className="btn btn-primary btn-action">Salvar</button>
+                        <button onClick={AtualizarCliente} type="button" className="btn btn-primary btn-action">Salvar</button>
                     </div>
 
                     { mensagem.length > 0 ? <div className="alert alert-danger mt-2" role="alert">{mensagem}</div> : null }
