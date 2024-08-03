@@ -84,10 +84,10 @@ function Home(){
                             confirmBtnText="Sim"
                             confirmBtnBsStyle={'danger'}
                             cancelBtnText="Não"
-                            // cancelBtnStyle={'light'}
+                            cancelBtnBsStyle={'primary'}
                             title="Exclusão"
-                            onConfirm={() =>deleteUser(confirmacaoId)}
-                            onCancel={()=> setConfirmacao(false)}
+                            onConfirm={() => deleteUser(confirmacaoId)}
+                            onCancel={() => setConfirmacao(false)}
                             reverseButtons={true}
                             >
                             Deseja excluir o cliente selecionado?

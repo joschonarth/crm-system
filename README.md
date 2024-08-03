@@ -2,21 +2,26 @@
 
 Este repositório contém um sistema de CRM (Customer Relationship Management) desenvolvido utilizando React para o front-end e Firebase para o backend e autenticação.
 
+<p align="center">
+    <img src="assets/cadastroClientes.png" style="width: 100%" />
+    </a>
+</p>
+
 ### Tecnologias Utilizadas 🛠️
 
 [![Tecnologias Utilizadas](https://skillicons.dev/icons?i=react,nodejs,firebase,javascript,bootstrap,css,html&theme=dark)](https://skillicons.dev)
 
-### Principais Recursos 🛠️
+### Principais Recursos ⚙️
 
-Gerenciamento de Clientes: Adicione, edite e exclua informações de clientes facilmente.
+* **Gerenciamento de Clientes:** Adicione, edite e exclua informações de clientes facilmente.
 
-Autenticação de Usuários: Autentique usuários com Firebase Authentication e controle o acesso à aplicação.
+* **Autenticação de Usuários:** Autentique usuários com Firebase Authentication e controle o acesso à aplicação.
 
-Armazenamento e Consulta de Dados: Utilize o Firestore para armazenar e consultar dados dos clientes de forma eficiente e em tempo real.
+* **Armazenamento e Consulta de Dados:** Utilize o Firestore para armazenar e consultar dados dos clientes de forma eficiente e em tempo real.
 
-Estado Global com Context API: Gerencie o estado global da aplicação usando Context API, facilitando a comunicação entre componentes.
+* **Estado Global com Context API:** Gerencie o estado global da aplicação usando Context API, facilitando a comunicação entre componentes.
 
-Hooks Personalizados: Utilize React Hooks para simplificar a lógica dos componentes e gerenciar estados complexos.
+* **Hooks Personalizados:** Utilize React Hooks para simplificar a lógica dos componentes e gerenciar estados complexos.
 
 ### Como Rodar o Projeto Localmente 🚀
 
