@@ -12,8 +12,8 @@ function Footer(){
                 <li className="list-inline-item"><a href="/#" target='_blank'><i className="fa fa-envolope fa-2x"></i></a></li>
             </ul>
         </div>
-        <a href="mailto:email@gmail.com">email@gmail.com</a>
-        <p>Desenvolvido por 99 CRM - {ano}</p>
+        <a href="mailto:crmsystem@gmail.com">crmsystem@gmail.com</a>
+        <p>Desenvolvido por CRM System - {ano}</p>
     </section>;
 }
 

@@ -13,6 +13,15 @@ function clientesPDF(clientes){
         }
     ];
 
+    const dados = clientes.map((cliente) => {
+        return [
+            {text: cliente.id, fontSize: 10, margin: [0, 2, 0, 2]},
+            {text: cliente.nome, fontSize: 10, margin: [0, 2, 0, 2]},
+            {text: cliente.email, fontSize: 10, margin: [0, 2, 0, 2]},
+            {text: cliente.phone, fontSize: 10, margin: [0, 2, 0, 2]},
+        ]
+    })
+
     const details = [
         {
             table: {
@@ -25,9 +34,10 @@ function clientesPDF(clientes){
                         {text: 'Email', style: 'tableHeader', fontSize: 10},
                         {text: 'Telefone', style: 'tableHeader', fontSize: 10},
                     ],
+                    ...dados
                 ]
             },
-            layout: 'headerLineOnly'
+            layout: 'lightHorizontalLines'
         }
     ];
 

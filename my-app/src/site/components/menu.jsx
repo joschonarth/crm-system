@@ -4,9 +4,9 @@ function Menu(){
     return <nav className="navbar fixed-top navbar-expand-md navbar-dark">
 
     <div className="container">
-        {/* <a href="/#" className="navbar-brand">99 CRM</a> */}
+        {/* <a href="/#" className="navbar-brand">CRM System</a> */}
         <a href="/#" className="navbar-brand">
-                <img src="img/logo.png" alt="" height="28"/>
+                <img src="img/logo.png" alt="" height="40"/>
         </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
