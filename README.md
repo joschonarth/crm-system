@@ -3,9 +3,14 @@
 Este repositório contém um sistema de CRM (Customer Relationship Management) desenvolvido utilizando React para o front-end e Firebase para o backend e autenticação.
 
 <p align="center">
+    <a href=''>
     <img src="assets/cadastroClientes.png" style="width: 100%" />
     </a>
 </p>
+
+
+![CRM System](assets/CRMSystem.gif)
+
 
 ### Tecnologias Utilizadas 🛠️
 
@@ -21,7 +26,7 @@ Este repositório contém um sistema de CRM (Customer Relationship Management) d
 
 * **React Hooks:** Utiliza o React Hooks para otimizar a lógica dos componentes e gerenciar estados complexos de forma mais intuitiva e eficiente.
 
-* **Context API:** Utilização do Context API para gerenciar o estado global da aplicação, facilitando a comunicação entre componentes.
+* **Context API:** Utilização do Context API para gerenciar o estado global da aplicação e proteger páginas contra acesso não autorizado, facilitando a autenticação e controle de acesso entre componentes.
 
 ### Como Rodar o Projeto Localmente 🚀
 
