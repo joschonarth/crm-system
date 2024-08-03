@@ -4,7 +4,7 @@ Este repositório contém um sistema de CRM (Customer Relationship Management) d
 
 <p align="center">
     <a href=''>
-    <img src="assets/CRM-System.gif" />
+    <img src="assets/CRMSystem.gif" />
     </a>
 </p>
 
