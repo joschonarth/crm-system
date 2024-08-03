@@ -13,15 +13,15 @@ Este repositório contém um sistema de CRM (Customer Relationship Management) d
 
 ### Principais Recursos ⚙️
 
-* **Gerenciamento de Clientes:** Adicione, edite e exclua informações de clientes facilmente.
+* **Gerenciamento de Clientes:** Adicionar, editar e excluir informações de clientes facilmente.
 
-* **Autenticação de Usuários:** Autentique usuários com Firebase Authentication e controle o acesso à aplicação.
+* **Autenticação de Usuários:** Autenticação de usuários com Firebase Authentication e controle de acesso à aplicação.
 
-* **Armazenamento e Consulta de Dados:** Utilize o Firestore para armazenar e consultar dados dos clientes de forma eficiente e em tempo real.
+* **Armazenamento e Consulta de Dados:** Utiliza o Firestore para armazenar e consultar dados dos clientes de forma eficiente e em tempo real.
 
-* **Estado Global com Context API:** Gerencie o estado global da aplicação usando Context API, facilitando a comunicação entre componentes.
+* **React Hooks:** Utiliza o React Hooks para otimizar a lógica dos componentes e gerenciar estados complexos de forma mais intuitiva e eficiente.
 
-* **Hooks Personalizados:** Utilize React Hooks para simplificar a lógica dos componentes e gerenciar estados complexos.
+* **Context API:** Utilização do Context API para gerenciar o estado global da aplicação, facilitando a comunicação entre componentes.
 
 ### Como Rodar o Projeto Localmente 🚀
 
@@ -39,7 +39,7 @@ npm install
 
 3. **🔥Configure as credenciais do Firebase**:
 - Crie um projeto no [Firebase Console](https://console.firebase.google.com/).
-- Copie as credenciais do seu projeto Firebase para o arquivo de configuração no React (`src/config/firebase.js`).
+- Copie as credenciais do seu projeto Firebase para o arquivo de configuração no React (`src/app/config/firebase.js`).
 - Em Firestore Database crie uma Collection de nome `clientes`.
 
 4. **Inicie o servidor de desenvolvimento**:
