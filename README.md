@@ -10,7 +10,16 @@ Este repositório contém um sistema de CRM (Customer Relationship Management) d
 
 ### Tecnologias Utilizadas 🛠️
 
-[![Tecnologias Utilizadas](https://skillicons.dev/icons?i=react,nodejs,firebase,javascript,bootstrap,css,html&theme=dark)](https://skillicons.dev)
+<!-- [![Tecnologias Utilizadas](https://skillicons.dev/icons?i=react,nodejs,firebase,javascript,bootstrap,css,html&theme=dark)](https://skillicons.dev) -->
+
+[![React](https://skillicons.dev/icons?i=react&theme=dark)](https://reactjs.org/)
+[![Node.js](https://skillicons.dev/icons?i=nodejs&theme=dark)](https://nodejs.org/)
+[![Firebase](https://skillicons.dev/icons?i=firebase&theme=dark)](https://firebase.google.com/)
+[![JavaScript](https://skillicons.dev/icons?i=javascript&theme=dark)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Bootstrap](https://skillicons.dev/icons?i=bootstrap&theme=dark)](https://getbootstrap.com/)
+[![CSS](https://skillicons.dev/icons?i=css&theme=dark)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![HTML](https://skillicons.dev/icons?i=html&theme=dark)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+
 
 ### Principais Recursos ⚙️
 
