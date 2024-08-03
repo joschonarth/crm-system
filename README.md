@@ -3,7 +3,7 @@
 Este repositório contém um sistema de CRM (Customer Relationship Management) desenvolvido utilizando React para o front-end e Firebase para o backend e autenticação.
 
 <p align="center">
-    <a href='CRM-System.gif'>
+    <a href='assets/CRM-System.gif'>
     <img src="assets/cadastroClientes.png" />
     </a>
 </p>
