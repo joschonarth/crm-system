@@ -11,8 +11,8 @@ Este repositório contém um sistema de CRM (Customer Relationship Management) d
 ### Tecnologias Utilizadas 🛠️
 
 [![React](https://skillicons.dev/icons?i=react&theme=dark)](https://reactjs.org/)
-[![Node.js](https://skillicons.dev/icons?i=nodejs&theme=dark)](https://nodejs.org/)
 [![Firebase](https://skillicons.dev/icons?i=firebase&theme=dark)](https://firebase.google.com/)
+[![Node.js](https://skillicons.dev/icons?i=nodejs&theme=dark)](https://nodejs.org/)
 [![JavaScript](https://skillicons.dev/icons?i=javascript&theme=dark)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![Bootstrap](https://skillicons.dev/icons?i=bootstrap&theme=dark)](https://getbootstrap.com/)
 [![CSS](https://skillicons.dev/icons?i=css&theme=dark)](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -45,7 +45,7 @@ git clone https://github.com/joschonarth/crm-system.git
 npm install
 ```
 
-3. **🔥Configure as credenciais do Firebase**:
+3. **Configure as credenciais do Firebase**: 🔥
 - Crie um projeto no [Firebase Console](https://console.firebase.google.com/).
 - Copie as credenciais do seu projeto Firebase para o arquivo de configuração no React (`src/app/config/firebase.js`).
 - Em Firestore Database crie uma Collection de nome `clientes`.
