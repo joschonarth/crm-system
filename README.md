@@ -25,11 +25,11 @@ Este repositório contém um sistema de CRM (Customer Relationship Management) d
 
 * **Autenticação de Usuários:** Autenticação de usuários com Firebase Authentication e controle de acesso à aplicação.
 
-* **Armazenamento e Consulta de Dados:** Utiliza o Firestore para armazenar e consultar dados dos clientes de forma eficiente e em tempo real.
+* **Armazenamento e Consulta de Dados:** Utilizado para armazenar e consultar dados dos clientes de forma eficiente e em tempo real.
 
-* **React Hooks:** Utiliza o React Hooks para otimizar a lógica dos componentes e gerenciar estados complexos de forma mais intuitiva e eficiente.
+* **React Hooks:** Utilizado para otimizar a lógica dos componentes, permitindo gerenciar estados complexos de forma mais intuitiva e eficiente, melhorando significativamente a performance da aplicação.
 
-* **Context API:** Utilização do Context API para gerenciar o estado global da aplicação e proteger páginas contra acesso não autorizado, facilitando a autenticação e controle de acesso entre componentes.
+* **Context API:** Utilizado para gerenciar o estado global da aplicação de forma eficaz. Isso não apenas simplifica a propagação de dados entre componentes, mas também reforça a segurança ao proteger páginas contra acesso não autorizado, facilitando a implementação de autenticação e controle de acesso.
 
 ### Como Rodar o Projeto Localmente 🚀
 
