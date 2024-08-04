@@ -19,17 +19,26 @@ Este repositório contém um sistema de CRM (Customer Relationship Management) d
 [![HTML](https://skillicons.dev/icons?i=html&theme=dark)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 
-### Principais Recursos ⚙️
+### Funcionalidades ⚙️
 
-* **Gerenciamento de Clientes:** Adicionar, editar e excluir informações de clientes facilmente.
-
+* **Gerenciamento de Clientes:** Implementação de operações CRUD para adicionar, editar e excluir informações de clientes de forma intuitiva e eficiente.
 * **Autenticação de Usuários:** Autenticação de usuários com Firebase Authentication e controle de acesso à aplicação.
+* **Armazenamento e Consulta de Dados:** Utiliza o Firestore para armazenar e consultar dados dos clientes de forma eficiente e em tempo real.
 
-* **Armazenamento e Consulta de Dados:** Utilizado para armazenar e consultar dados dos clientes de forma eficiente e em tempo real.
+### React ⚛️
 
-* **React Hooks:** Utilizado para otimizar a lógica dos componentes, permitindo gerenciar estados complexos de forma mais intuitiva e eficiente, melhorando significativamente a performance da aplicação.
+* O **React** foi fundamental como base da aplicação, proporcionando uma arquitetura eficiente para o desenvolvimento frontend.
 
-* **Context API:** Utilizado para gerenciar o estado global da aplicação de forma eficaz. Isso não apenas simplifica a propagação de dados entre componentes, mas também reforça a segurança ao proteger páginas contra acesso não autorizado, facilitando a implementação de autenticação e controle de acesso.
+* **React Hooks:** utilizado para otimizar a lógica dos componentes, permitindo gerenciar estados complexos de forma mais intuitiva e eficiente, melhorando significativamente a performance da aplicação.
+
+* **Context API:** utilizado para gerenciar o estado global da aplicação de forma eficaz. Isso não apenas simplifica a propagação de dados entre componentes, mas também reforça a segurança ao proteger páginas contra acesso não autorizado, facilitando a implementação de autenticação e controle de acesso.
+
+
+### Firebase 🔥
+
+* **Cloud Firestore:** banco de dados NoSQL para armazenar e consultar dados de clientes em tempo real de maneira escalável e eficiente.
+
+* **Firebase Authentication:** oferece um processo seguro e simplificado de autenticação de usuários, garantindo controle de acesso rigoroso às funcionalidades da aplicação.
 
 ### Como Rodar o Projeto Localmente 🚀
 
