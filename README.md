@@ -1,4 +1,4 @@
-# CRM System
+# 📈 CRM System 
 
 Este repositório contém um sistema de CRM (Customer Relationship Management) desenvolvido utilizando React para o front-end e Firebase para o backend e autenticação.
 
